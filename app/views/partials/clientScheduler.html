@@ -1,3 +1,80 @@
-<div>
-	<h1>eh</h1>
+<div class="clientScheduler">
+	<h4>Client Scheduler</h4>
+	<p class="clientScheduler-paragraph">We've found 23 clients to schedule upcoming events with</p>
+	<div ng-include="'views/partials/segmentComponent.html'"></div>
+
+	<div class="clientListComponent">
+		<div class="clientListComponent-buttonGroup">
+			<div class="slds-button-group" role="group">
+				<button class="slds-button slds-button--icon-border">
+					<svg aria-hidden="true" class="slds-button__icon">
+						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#chart"></use>
+					</svg>
+					<span class="slds-assistive-text">Charts</span>
+				</button>
+				<button class="slds-button slds-button--icon-border">
+					<svg aria-hidden="true" class="slds-button__icon">
+						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#filterList"></use>
+					</svg>
+					<span class="slds-assistive-text">Filter List</span>
+				</button>
+				<button class="slds-button slds-button--icon-more" aria-haspopup="true">
+					<svg aria-hidden="true" class="slds-button__icon">
+						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#settings"></use>
+					</svg>
+					<svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small">
+						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#down"></use>
+					</svg>
+					<span class="slds-assistive-text">Settings</span>
+				</button>
+			</div>
+		</div>
+
+		<table class="slds-table slds-table--bordered slds-table--cell-buffer">
+			<thead>
+				<tr class="slds-text-title--caps">
+					<th scope="col">
+						<div class="" title="id">#</div>
+					</th>
+					<th scope="col">
+						<div class="" title="Client Name">Client Name</div>
+					</th>
+					<th scope="col">
+						<div class="" title="Tier">Tier</div>
+					</th>
+					<th scope="col">
+						<div class="" title="Risk Tolerance">Risk Tolerance</div>
+					</th>
+					<th scope="col">
+						<div class="" title="Total Financial Accounts">Total Financial Accounts</div>
+					</th>
+					<th scope="col">
+						<div class="" title="Last Interactiont">Last Interaction</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="client in clients">
+					<th scope="row" data-label="Opportunity Name">
+						<div class="" title="{{client.id}}">{{client.id}}</div>
+					</th>
+					<td data-label="Client Name">
+						<div class="" title="{{client.name}}">{{client.name}}</div>
+					</td>
+					<td data-label="Tier">
+						<div class="" title="{{client.tier}">{{client.tier}}</div>
+					</td>
+					<td data-label="Risk Toleranceg">
+						<div class="" title="{{client.tolerance}}">{{client.tolerance}}</div>
+					</td>
+					<td data-label="Total Financial Accounts">
+						<div class="" title="{{client.accounts}}">{{client.accounts}}</div>
+					</td>
+					<td data-label="Last Interaction">
+						<div class="" title="{{client.interaction}}">{{client.interaction}}</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>

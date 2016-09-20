@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('DF16Wealth')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	.controller('MainCtrl', function ($scope, clients) {
+
+		clients.items().success(function(data){
+				$scope.clients = data;
+		});
+
+	});

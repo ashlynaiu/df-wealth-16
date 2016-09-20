@@ -1,0 +1,74 @@
+////////////////////////////////////
+///////Client Scheduler Styles/////
+//////////////////////////////////
+%segmentComponent-item
+	width: 230px
+	background-color: white
+	padding: 10px
+	color: $text-color
+	margin-right: 12px
+	+border-radius(4px)
+
+	p:not(:last-child)
+		margin-bottom: 5px
+
+	.segmentComponent-item-title
+		font-size: 14px
+
+	.segmentComponent-item-caption
+		font-size: 12px
+		color: $blue-gray
+
+.clientScheduler
+	background-color: $background-color
+	padding: 32px
+
+	&-paragraph
+		margin-bottom: 12px
+
+/////////////////////////////////////
+///////Segment Component Styles/////
+///////////////////////////////////
+.segmentComponent
+	display: flex
+	justify-content: space-between
+	margin-bottom: 24px
+
+.segmentComponent-container
+	display: flex
+
+.segmentComponent-item--walletShare
+	@extend %segmentComponent-item
+	+createBorder($purple, solid)
+
+.segmentComponent-item--household
+	@extend %segmentComponent-item
+	+createBorder($teal, solid)
+
+.segmentComponent-item--add
+	@extend %segmentComponent-item
+	+createBorder($blue-gray, dashed)
+	display: flex
+	align-items: center
+	justify-content: center
+	&:hover
+		background-color: rgba(255, 255, 255, 0.7)
+
+	.segmentComponent-item-title
+		text-align: center
+		color: $blue-gray
+
+.clientScheduler-buttonGroup
+	align-self: center
+	div:not(:last-child)
+		margin-right: 12px
+
+//////////////////////////////////
+///////List Component Styles/////
+////////////////////////////////
+.clientListComponent
+	table
+		font-size: 12px
+	&-buttonGroup
+		float: right
+		margin-bottom: 12px
