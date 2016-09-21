@@ -1,16 +1,28 @@
 ////////////////////////////////////
 ///////Client Scheduler Styles/////
 //////////////////////////////////
++create-media(add-segement, (middle, standard, before))
+	no-op: 1
+
 %segmentComponent-item
-	width: 230px
+	width: 240px
 	background-color: white
 	padding: 10px
 	color: $text-color
 	margin-right: 12px
+	display: flex
+	position: relative
 	+border-radius(4px)
 
 	p:not(:last-child)
 		margin-bottom: 5px
+
+	img
+		margin-right: 8px
+	.dropdown
+		position: absolute
+		top: 8px
+		right: 2px
 
 	.segmentComponent-item-title
 		font-size: 14px
@@ -52,12 +64,20 @@
 	display: flex
 	align-items: center
 	justify-content: center
+
 	&:hover
 		background-color: rgba(255, 255, 255, 0.7)
 
 	.segmentComponent-item-title
+		position: relative
 		text-align: center
 		color: $blue-gray
+		+get-media(add-segement, '.svg-add-segment')
+		&:before
+			position: absolute
+			top: -1px
+		span
+			padding-left: 28px
 
 .clientScheduler-buttonGroup
 	align-self: center
@@ -68,13 +88,13 @@
 ///////List Component Styles/////
 ////////////////////////////////
 .clientListComponent
-	transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s
+	transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s
 	overflow: hidden
 //Slider Animation
 .clientListComponentHide
 	height: 0
 .clientListComponentShow
-	height: 350px
+	height: 370px
 
 .clientListComponent-buttonGroup
 	float: right
@@ -125,3 +145,33 @@
 
 .clientListComponent-slider--wave
 	@extend %clientListComponent-slider
+
+/////////////////////////////////////////
+///////List Component Styles Footer/////
+///////////////////////////////////////
+
+//TO DO: Adjust arrows
++create-media(previous-triangle, (top, standard, before))
+	no-op: 1
++create-media(next-triangle, (middle, standard, after))
+	no-op: 1
+
+.clientListComponent-bottomNav
+	margin-top: 8px
+	display: flex
+	p
+		font-size: 12px
+
+.bottomNav-previous
+	+get-media(previous-triangle, '.svg-previous-arrow')
+	span
+		margin-left: 4px
+
+.bottomNav-next
+	+get-media(next-triangle, '.svg-next-arrow')
+	margin-left: 16px
+	span
+		margin-right: 4px
+
+.bottomNav-showing
+	padding-left: 22px

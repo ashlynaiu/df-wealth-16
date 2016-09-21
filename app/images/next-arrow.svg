@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="6px" height="11px" viewBox="0 0 6 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Non-Modal-Created-Copy" transform="translate(-139.000000, -600.000000)" fill="#16325C">
+            <g id="Client-List-Navigation" transform="translate(25.000000, 597.000000)">
+                <path d="M119.896154,7.81730769 C120.034615,7.95576923 120.034615,8.18653846 119.896154,8.325 L115.119231,13.0557692 C114.980769,13.1942308 114.75,13.1942308 114.611538,13.0557692 L114.103846,12.5480769 C113.965385,12.4096154 113.965385,12.1788462 114.103846,12.0403846 L117.865385,8.325 C118.003846,8.18653846 118.003846,7.95576923 117.865385,7.81730769 L114.126923,4.10192308 C113.988462,3.96346154 113.988462,3.73269231 114.126923,3.59423077 L114.634615,3.08653846 C114.773077,2.97115385 114.980769,2.97115385 115.119231,3.08653846 L119.896154,7.81730769 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
