@@ -25,6 +25,7 @@
 
 	&-paragraph
 		margin-bottom: 12px
+		font-size: 14px
 
 /////////////////////////////////////
 ///////Segment Component Styles/////
@@ -67,8 +68,38 @@
 ///////List Component Styles/////
 ////////////////////////////////
 .clientListComponent
-	table
-		font-size: 12px
 	&-buttonGroup
 		float: right
 		margin-bottom: 12px
+
+.clientListComponent-listContainer
+	display: flex
+	width: 100%
+	table
+		box-sizing: border-box
+		font-size: 13px
+		width: 60%
+		border-left: $standard-border
+
+.clientListComponent-slider
+	box-sizing: border-box
+	width: 40%
+	background-color: white
+	border: $standard-border
+	&-header
+		padding: 9px 16px
+		border-bottom: $standard-border
+		font-size: 14px
+		color: $blue-gray
+	&-body
+		padding: 16px
+		display: flex
+		.slider-title
+			font-size: 14px
+			margin-bottom: 4px
+		.slds-form-element
+			padding-left: 16px
+			margin-bottom: 4px
+			cursor: pointer
+		.bottomSpace
+			margin-bottom: 16px

@@ -62,5 +62,13 @@
         "tolerance": "Aggressive",
         "accounts": "893765.00",
         "interaction": "Jun 13, 2016"
+    },
+    {
+        "id": "9",
+        "name": "Ray Lew",
+        "tier": "Platinum",
+        "tolerance": "Moderate",
+        "accounts": "937281.00",
+        "interaction": "March 22, 2016"
     }
 ]
