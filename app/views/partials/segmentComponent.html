@@ -15,6 +15,9 @@
 
 	<div class="clientScheduler-buttonGroup">
 		<button class="slds-button slds-button--brand">Connect with Clients</button>
-		<button class="slds-button slds-button--neutral">Hide List</button>
+		<button class="slds-button slds-button--neutral" ng-click="toogleClientList()">
+			<span ng-if="!showClientList">Show List</span>
+			<span ng-if="showClientList">Hide List</span>
+		</button>
 	</div>
 </div>

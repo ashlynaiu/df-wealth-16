@@ -68,31 +68,46 @@
 ///////List Component Styles/////
 ////////////////////////////////
 .clientListComponent
-	&-buttonGroup
-		float: right
-		margin-bottom: 12px
+	transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s
+	overflow: hidden
+//Slider Animation
+.clientListComponentHide
+	height: 0
+.clientListComponentShow
+	height: 350px
+
+.clientListComponent-buttonGroup
+	float: right
+	margin-bottom: 12px
 
 .clientListComponent-listContainer
 	display: flex
 	width: 100%
-	table
+	.clientListComponent-listTable
+		width: 65%
 		box-sizing: border-box
+	table
 		font-size: 13px
-		width: 60%
 		border-left: $standard-border
 
-.clientListComponent-slider
+%clientListComponent-slider
 	box-sizing: border-box
-	width: 40%
+	width: 35%
 	background-color: white
 	border: $standard-border
-	&-header
+	height: 303px
+	overflow: scroll
+	.slider-header
 		padding: 9px 16px
 		border-bottom: $standard-border
 		font-size: 14px
 		color: $blue-gray
-	&-body
+	.slider-body
 		padding: 16px
+
+.clientListComponent-slider--filter
+	@extend %clientListComponent-slider
+	.slider-body
 		display: flex
 		.slider-title
 			font-size: 14px
@@ -103,3 +118,10 @@
 			cursor: pointer
 		.bottomSpace
 			margin-bottom: 16px
+	.slider-footer
+		padding: 8px 16px
+		border-top: $standard-border
+		background-color: $light-blue-gray
+
+.clientListComponent-slider--wave
+	@extend %clientListComponent-slider

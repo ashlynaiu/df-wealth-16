@@ -3,246 +3,39 @@
 	<p class="clientScheduler-paragraph">We've found 16 clients to schedule upcoming events with</p>
 	<div ng-include="'views/partials/segmentComponent.html'"></div>
 
-	<div class="clientListComponent">
-		<div class="clientListComponent-buttonGroup">
-			<div class="slds-button-group" role="group">
-				<button class="slds-button slds-button--icon-border">
-					<svg aria-hidden="true" class="slds-button__icon">
-						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#chart"></use>
-					</svg>
-					<span class="slds-assistive-text">Charts</span>
-				</button>
-				<button class="slds-button slds-button--icon-border">
-					<svg aria-hidden="true" class="slds-button__icon">
-						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#filterList"></use>
-					</svg>
-					<span class="slds-assistive-text">Filter List</span>
-				</button>
-				<button class="slds-button slds-button--icon-more" aria-haspopup="true">
-					<svg aria-hidden="true" class="slds-button__icon">
-						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#settings"></use>
-					</svg>
-					<svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small">
-						<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#down"></use>
-					</svg>
-					<span class="slds-assistive-text">Settings</span>
-				</button>
-			</div>
-		</div>
-
-		<div class="clientListComponent-listContainer">
-			<table class="slds-table slds-table--bordered slds-table--cell-buffer">
-				<thead>
-					<tr class="slds-text-title--caps">
-						<th scope="col">
-							<div class="" title="id">#</div>
-						</th>
-						<th scope="col">
-							<div class="" title="Client Name">Client Name</div>
-						</th>
-						<th scope="col">
-							<div class="" title="Tier">Tier</div>
-						</th>
-						<th scope="col">
-							<div class="" title="Risk Tolerance">Risk Tolerance</div>
-						</th>
-						<th scope="col">
-							<div class="" title="Total Financial Accounts">Total Financial Accounts</div>
-						</th>
-						<th scope="col">
-							<div class="" title="Last Interactiont">Last Interaction</div>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="client in clients">
-						<th scope="row" data-label="Opportunity Name">
-							<div class="" title="{{client.id}}">{{client.id}}</div>
-						</th>
-						<td data-label="Client Name">
-							<div class="" title="{{client.name}}">{{client.name}}</div>
-						</td>
-						<td data-label="Tier">
-							<div class="" title="{{client.tier}">{{client.tier}}</div>
-						</td>
-						<td data-label="Risk Toleranceg">
-							<div class="" title="{{client.tolerance}}">{{client.tolerance}}</div>
-						</td>
-						<td data-label="Total Financial Accounts">
-							<div class="" title="{{client.accounts}}">{{client.accounts | currency}}</div>
-						</td>
-						<td data-label="Last Interaction">
-							<div class="" title="{{client.interaction}}">{{client.interaction}}</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<div class="clientListComponent-slider">
-				<div class="clientListComponent-slider-header">
-					<p>Get more precision by filtering your client list</p>
-				</div>
-
-				<div class="clientListComponent-slider-body">
-
-					<!--Start Column One -->
-					<div class="slider-columnOne">
-						<p class="slider-title">Client Tiers</p>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1027" />
-									<label class="slds-checkbox__label" for="checkbox-1027">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Platinum</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1028" />
-									<label class="slds-checkbox__label" for="checkbox-1028">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Gold</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1029" />
-									<label class="slds-checkbox__label" for="checkbox-1029">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Silver</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element bottomSpace">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1030" />
-									<label class="slds-checkbox__label" for="checkbox-1030">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Bronze</span>
-									</label>
-								</span>
-							</div>
-						</div>
-
-						<p class="slider-title">Risk Tolerance</p>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1031" />
-									<label class="slds-checkbox__label" for="checkbox-1031">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Aggressive</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1032" />
-									<label class="slds-checkbox__label" for="checkbox-1032">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Moderate</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1033" />
-									<label class="slds-checkbox__label" for="checkbox-1033">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Conservative</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1034" />
-									<label class="slds-checkbox__label" for="checkbox-1034">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Checkbox Label</span>
-									</label>
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<!--Start Column Two -->
-					<div class="slider-columnTwo">
-						<p class="slider-title">Marketing Segment</p>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1035" />
-									<label class="slds-checkbox__label" for="checkbox-1035">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Female Investor</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1036" />
-									<label class="slds-checkbox__label" for="checkbox-1036">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">High Net Worth</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1037" />
-									<label class="slds-checkbox__label" for="checkbox-1037">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Mass Affluent</span>
-									</label>
-								</span>
-							</div>
-						</div>
-						<!--Checkbox-->
-						<div class="slds-form-element">
-							<div class="slds-form-element__control">
-								<span class="slds-checkbox">
-									<input type="checkbox" name="options" id="checkbox-1038" />
-									<label class="slds-checkbox__label" for="checkbox-1038">
-										<span class="slds-checkbox--faux"></span>
-										<span class="slds-form-element__label">Millennial</span>
-									</label>
-								</span>
-							</div>
-						</div>
-					</div>
-
+	<div class="clientListComponent" ng-class="showClientList ? 'clientListComponentShow' : 'clientListComponentHide'">
+			<div class="clientListComponent-buttonGroup">
+				<div class="slds-button-group" role="group">
+					<button class="slds-button slds-button--icon-border">
+						<svg aria-hidden="true" class="slds-button__icon">
+							<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#chart"></use>
+						</svg>
+						<span class="slds-assistive-text">Charts</span>
+					</button>
+					<button class="slds-button slds-button--icon-border">
+						<svg aria-hidden="true" class="slds-button__icon">
+							<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#filterList"></use>
+						</svg>
+						<span class="slds-assistive-text">Filter List</span>
+					</button>
+					<button class="slds-button slds-button--icon-more" aria-haspopup="true">
+						<svg aria-hidden="true" class="slds-button__icon">
+							<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#settings"></use>
+						</svg>
+						<svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small">
+							<use xlink:href="/images/icons/utility-sprite/svg/symbols.svg#down"></use>
+						</svg>
+						<span class="slds-assistive-text">Settings</span>
+					</button>
 				</div>
 			</div>
-		</div>
+
+			<div class="clientListComponent-listContainer">
+				<div class="clientListComponent-listTable" ng-include="'views/partials/clientTableComponent.html'"></div>
+				<!-- <div class="clientListComponent-slider--filter" ng-include="'views/partials/clientFilter.html'"></div> -->
+
+				<div class="clientListComponent-slider--wave" ng-include="'views/partials/clientWave.html'"></div>
+			</div>
+
 	</div>
 </div>

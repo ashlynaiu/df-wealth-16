@@ -1,0 +1,46 @@
+<table class="slds-table slds-table--bordered slds-table--cell-buffer">
+	<thead>
+		<tr class="slds-text-title--caps">
+			<th scope="col">
+				<div class="" title="id">#</div>
+			</th>
+			<th scope="col">
+				<div class="" title="Client Name">Client Name</div>
+			</th>
+			<th scope="col">
+				<div class="" title="Tier">Tier</div>
+			</th>
+			<th scope="col">
+				<div class="" title="Risk Tolerance">Risk Tolerance</div>
+			</th>
+			<th scope="col">
+				<div class="" title="Total Financial Accounts">Total Financial Accounts</div>
+			</th>
+			<th scope="col">
+				<div class="" title="Last Interactiont">Last Interaction</div>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="client in clients">
+			<th scope="row" data-label="Opportunity Name">
+				<div class="" title="{{client.id}}">{{client.id}}</div>
+			</th>
+			<td data-label="Client Name">
+				<div class="" title="{{client.name}}">{{client.name}}</div>
+			</td>
+			<td data-label="Tier">
+				<div class="" title="{{client.tier}">{{client.tier}}</div>
+			</td>
+			<td data-label="Risk Toleranceg">
+				<div class="" title="{{client.tolerance}}">{{client.tolerance}}</div>
+			</td>
+			<td data-label="Total Financial Accounts">
+				<div class="" title="{{client.accounts}}">{{client.accounts | currency}}</div>
+			</td>
+			<td data-label="Last Interaction">
+				<div class="" title="{{client.interaction}}">{{client.interaction}}</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
