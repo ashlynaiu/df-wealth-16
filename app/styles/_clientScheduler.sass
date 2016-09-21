@@ -12,6 +12,7 @@
 	margin-right: 12px
 	display: flex
 	position: relative
+	cursor: pointer
 	+border-radius(4px)
 
 	p:not(:last-child)
@@ -60,6 +61,7 @@
 
 .segmentComponent-item--add
 	@extend %segmentComponent-item
+	position: relative
 	+createBorder($blue-gray, dashed)
 	display: flex
 	align-items: center
@@ -68,16 +70,41 @@
 	&:hover
 		background-color: rgba(255, 255, 255, 0.7)
 
+	p:not(:last-child)
+		margin-bottom: 0
+
 	.segmentComponent-item-title
 		position: relative
 		text-align: center
 		color: $blue-gray
 		+get-media(add-segement, '.svg-add-segment')
+
 		&:before
 			position: absolute
 			top: -1px
+
 		span
 			padding-left: 28px
+
+	.segmentComponent-dropdown
+		position: absolute
+		top: 60px
+		width: 416px
+		left: 0
+		border: $standard-border
+		z-index: 100
+		+border-radius(4px)
+		.slds-dropdown-trigger
+			display: inherit
+		.slds-form-element
+			margin-bottom: 8px
+		.dropdown-body
+			padding: 16px
+			background-color: white
+		.dropdown-footer
+			padding: 8px 16px 16px 16px
+			background-color: $light-blue-gray
+			border-top: $standard-border
 
 .clientScheduler-buttonGroup
 	align-self: center
@@ -157,7 +184,7 @@
 	no-op: 1
 
 .clientListComponent-bottomNav
-	margin-top: 8px
+	margin-top: 10px
 	display: flex
 	p
 		font-size: 12px

@@ -17,13 +17,14 @@
 			</div>
 		</div>
 		<div class="segmentComponent-item--add">
-			<p class="segmentComponent-item-title"><span>Add Segment</span></p>
+			<p class="segmentComponent-item-title" ng-click="toggleDropdown()"><span>Add Segment</span></p>
+			<div ng-include="'views/partials/segmentDropdown.html'" class="segmentComponent-dropdown" ng-if="showDropdown"></div>
 		</div>
 	</div>
 
 	<div class="clientScheduler-buttonGroup">
 		<button class="slds-button slds-button--brand">Connect with Clients</button>
-		<button class="slds-button slds-button--neutral" ng-click="toogleClientList()">
+		<button class="slds-button slds-button--neutral" ng-click="toggleClientList()">
 			<span ng-if="!showClientList">Show List</span>
 			<span ng-if="showClientList">Hide List</span>
 		</button>

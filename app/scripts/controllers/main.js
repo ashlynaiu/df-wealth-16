@@ -5,8 +5,18 @@ angular.module('DF16Wealth')
 		$scope.showClientList = false;
 		$scope.showWave = true;
 		$scope.showFilter = false;
+		$scope.showDropdown = false;
 
-		$scope.toogleClientList = function() {
+		$scope.toggleDropdown = function() {
+			if($scope.showDropdown === false) {
+				$scope.showDropdown = true;
+			}
+			else {
+				$scope.showDropdown = false;
+			}
+		};
+
+		$scope.toggleClientList = function() {
 			if ($scope.showClientList === false) {
 				$scope.showClientList = true;
 			}
@@ -22,7 +32,7 @@ angular.module('DF16Wealth')
 			}
 		};
 
-		$scope.toogleWave = function() {
+		$scope.toggleWave = function() {
 			if ($scope.showWave === false) {
 				$scope.showWave = true;
 				$scope.showFilter = false;
