@@ -20,6 +20,7 @@
 
 	img
 		margin-right: 8px
+
 	.dropdown
 		position: absolute
 		top: 8px
@@ -34,11 +35,24 @@
 
 .clientScheduler
 	background-color: $background-color
-	padding: 32px
+	transition: max-height 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750)
 
 	&-paragraph
 		margin-bottom: 12px
 		font-size: 14px
+
+//animate entire schedule dropdown + padding hack
+.clientSchedulerShow
+	max-height: 1000px
+	padding: 24px 32px 32px 32px
+	&-add-active
+		padding: 24px 32px 32px 32px
+		overflow: hidden
+.clientSchedulerHide
+	max-height: 1px
+	&-add-active
+		padding: 24px 32px 32px 32px
+	overflow: hidden
 
 /////////////////////////////////////
 ///////Segment Component Styles/////
@@ -46,7 +60,6 @@
 .segmentComponent
 	display: flex
 	justify-content: space-between
-	margin-bottom: 24px
 
 .segmentComponent-container
 	display: flex
@@ -94,13 +107,17 @@
 		border: $standard-border
 		z-index: 100
 		+border-radius(4px)
+
 		.slds-dropdown-trigger
 			display: inherit
+
 		.slds-form-element
 			margin-bottom: 8px
+
 		.dropdown-body
 			padding: 16px
 			background-color: white
+
 		.dropdown-footer
 			padding: 8px 16px 16px 16px
 			background-color: $light-blue-gray
@@ -115,8 +132,10 @@
 ///////List Component Styles/////
 ////////////////////////////////
 .clientListComponent
-	transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s
+	transition: $standard-animate
 	overflow: hidden
+	margin-top: 16px
+
 //Slider Animation
 .clientListComponentHide
 	height: 0
@@ -130,9 +149,11 @@
 .clientListComponent-listContainer
 	display: flex
 	width: 100%
+
 	.clientListComponent-listTable
 		width: 65%
 		box-sizing: border-box
+
 	table
 		font-size: 13px
 		border-left: $standard-border
@@ -144,11 +165,13 @@
 	border: $standard-border
 	height: 303px
 	overflow: scroll
+
 	.slider-header
 		padding: 9px 16px
 		border-bottom: $standard-border
 		font-size: 14px
 		color: $blue-gray
+
 	.slider-body
 		padding: 16px
 
@@ -156,15 +179,19 @@
 	@extend %clientListComponent-slider
 	.slider-body
 		display: flex
+
 		.slider-title
 			font-size: 14px
 			margin-bottom: 4px
+
 		.slds-form-element
 			padding-left: 16px
 			margin-bottom: 4px
 			cursor: pointer
+
 		.bottomSpace
 			margin-bottom: 16px
+
 	.slider-footer
 		padding: 8px 16px
 		border-top: $standard-border
@@ -188,6 +215,7 @@
 	display: flex
 	p
 		font-size: 12px
+		cursor: pointer
 
 .bottomNav-previous
 	+get-media(previous-triangle, '.svg-previous-arrow')

@@ -6,6 +6,16 @@ angular.module('DF16Wealth')
 		$scope.showWave = true;
 		$scope.showFilter = false;
 		$scope.showDropdown = false;
+		$scope.showScheduler = false;
+
+		$scope.toggleScheduler = function() {
+			if($scope.showScheduler === false) {
+				$scope.showScheduler = true;
+			}
+			else {
+				$scope.showScheduler = false;
+			}
+		};
 
 		$scope.toggleDropdown = function() {
 			if($scope.showDropdown === false) {
@@ -25,7 +35,7 @@ angular.module('DF16Wealth')
 			}
 		};
 
-		$scope.toogleFilter = function() {
+		$scope.toggleFilter = function() {
 			if ($scope.showFilter === false) {
 				$scope.showFilter = true;
 				$scope.showWave = false;
