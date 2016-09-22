@@ -40,6 +40,18 @@
 		<div class="slds-form-element">
 			<div class="slds-form-element__control">
 				<span class="slds-checkbox">
+					<input type="checkbox" name="options" id="checkbox-1020" />
+					<label class="slds-checkbox__label" for="checkbox-1020">
+						<span class="slds-checkbox--faux"></span>
+						<span class="slds-form-element__label">Best interest clients</span>
+					</label>
+				</span>
+			</div>
+		</div>
+		<!--Checkbox-->
+		<div class="slds-form-element">
+			<div class="slds-form-element__control">
+				<span class="slds-checkbox">
 					<input type="checkbox" name="options" id="checkbox-1024" />
 					<label class="slds-checkbox__label" for="checkbox-1024">
 						<span class="slds-checkbox--faux"></span>
@@ -74,7 +86,7 @@
 		</div>
 	</div>
 	<div class="dropdown-footer">
-		<button class="slds-button slds-button--brand">Update</button>
+		<button class="slds-button slds-button--brand" ng-click="updateSegment()">Update</button>
 		<button class="slds-button slds-button--neutral" ng-click="toggleDropdown()">Close</button>
 	</div>
 </div>

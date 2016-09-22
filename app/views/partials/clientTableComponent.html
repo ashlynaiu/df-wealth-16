@@ -22,7 +22,8 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="client in clients">
+		<!-- <tr ng-repeat="client in clients | limitTo:9"> -->
+		<tr ng-repeat="client in clients | limitTo:9">
 			<th scope="row" data-label="Opportunity Name">
 				<div class="" title="{{client.id}}">{{client.id}}</div>
 			</th>

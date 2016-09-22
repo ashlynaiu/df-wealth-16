@@ -10,7 +10,7 @@
     {
         "id": "2",
         "name": "Bernie Wunsch",
-        "tier": "Gold",
+        "tier": "Bronze",
         "tolerance": "Aggressive",
         "accounts": "434610.00",
         "interaction": "Feb 3, 2016"
@@ -26,7 +26,7 @@
     {
         "id": "4",
         "name": "Felipa Upton",
-        "tier": "Gold",
+        "tier": "Silver",
         "tolerance": "Moderate",
         "accounts": "826162.00",
         "interaction": "May 19, 2016"
@@ -66,9 +66,25 @@
     {
         "id": "9",
         "name": "Ray Lew",
-        "tier": "Platinum",
+        "tier": "Silver",
         "tolerance": "Moderate",
         "accounts": "937281.00",
         "interaction": "March 22, 2016"
+    },
+    {
+        "id": "10",
+        "name": "Teressa Wignall",
+        "tier": "Gold",
+        "tolerance": "Moderate",
+        "accounts": "716233.00",
+        "interaction": "March 30, 2016"
+    },
+    {
+        "id": "11",
+        "name": "Travis Dacus",
+        "tier": "Platinum",
+        "tolerance": "Moderate",
+        "accounts": "795512.00",
+        "interaction": "February 5, 2016"
     }
 ]

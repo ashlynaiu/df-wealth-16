@@ -10,7 +10,8 @@
 		<div class="slds-form-element">
 			<div class="slds-form-element__control">
 				<span class="slds-checkbox">
-					<input type="checkbox" name="options" id="checkbox-1027" />
+					<input type="checkbox" name="options" id="checkbox-1027" ng-model="checkboxModel.platinum"/>
+					{{checkboxModel.platinum}}
 					<label class="slds-checkbox__label" for="checkbox-1027">
 						<span class="slds-checkbox--faux"></span>
 						<span class="slds-form-element__label">Platinum</span>
@@ -161,5 +162,5 @@
 </div>
 
 <div class="slider-footer">
-	<button class="slds-button slds-button--brand">Update</button>
+	<button class="slds-button slds-button--brand" ng-click="updateClient()">Update</button>
 </div>

@@ -41,6 +41,7 @@
 		margin-bottom: 12px
 		font-size: 14px
 
+//wtf hack
 //animate entire schedule dropdown + padding hack
 .clientSchedulerShow
 	max-height: 1000px
@@ -72,10 +73,25 @@
 	@extend %segmentComponent-item
 	+createBorder($teal, solid)
 
+.segmentComponent-item--best
+	@extend %segmentComponent-item
+	transition: $fast-animate
+	opacity: 0
+	+createBorder($orange, solid)
+
+//Segment Animation
+.segmentComponent-item--best.newSegmentShow
+	opacity: 1
+.segmentComponent-item--best.ng-enter
+	opacity: 0
+
+.segmentComponent-item-wrapper
+	position: relative
+
 .segmentComponent-item--add
 	@extend %segmentComponent-item
-	position: relative
 	+createBorder($blue-gray, dashed)
+	height: 100%
 	display: flex
 	align-items: center
 	justify-content: center
@@ -99,29 +115,37 @@
 		span
 			padding-left: 28px
 
-	.segmentComponent-dropdown
-		position: absolute
-		top: 60px
-		width: 416px
-		left: 0
-		border: $standard-border
-		z-index: 100
-		+border-radius(4px)
+.segmentComponent-dropdown
+	position: absolute
+	top: 60px
+	width: 416px
+	left: 0
+	border: $standard-border
+	z-index: 100
+	transition: $fast-animate
+	+border-radius(4px)
 
-		.slds-dropdown-trigger
-			display: inherit
+	.slds-dropdown-trigger
+		display: inherit
 
-		.slds-form-element
-			margin-bottom: 8px
+	.slds-form-element
+		margin-bottom: 8px
 
-		.dropdown-body
-			padding: 16px
-			background-color: white
+	.dropdown-body
+		padding: 16px
+		background-color: white
 
-		.dropdown-footer
-			padding: 8px 16px 16px 16px
-			background-color: $light-blue-gray
-			border-top: $standard-border
+	.dropdown-footer
+		padding: 8px 16px 16px 16px
+		background-color: $light-blue-gray
+		border-top: $standard-border
+
+//Animate Dropdown
+.segmentComponent-dropdown.dropdownShow
+	opacity: 1
+
+.segmentComponent-dropdown.dropdownHide
+	opacity: 0
 
 .clientScheduler-buttonGroup
 	align-self: center
