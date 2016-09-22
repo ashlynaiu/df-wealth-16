@@ -1,7 +1,7 @@
 <div ng-class="showScheduler ? 'clientSchedulerShow' : 'clientSchedulerHide'" class="clientScheduler">
 	<h4>Client Scheduler</h4>
 	<p class="clientScheduler-paragraph">
-		We've found <span ng-if="!newSegment">16</span><span ng-if="newSegment">18</span> clients to schedule upcoming events with
+		We've found <span ng-if="!newSegment">16</span><span ng-if="newSegment">{{clients.length}}</span> clients to schedule upcoming events with
 	</p>
 
 	<div ng-include="'views/partials/segmentComponent.html'"></div>
@@ -42,7 +42,7 @@
 		<div class="clientListComponent-bottomNav">
 			<p class="bottomNav-previous"><span>Previous</span></p>
 			<p class="bottomNav-next"><span>Next</span></p>
-			<p class="bottomNav-showing">Showing 9 of 18</p>
+			<p class="bottomNav-showing">Showing 9 of {{clients.length}}</p>
 			</p>
 		</div>
 	</div>

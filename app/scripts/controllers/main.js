@@ -76,35 +76,17 @@ angular.module('DF16Wealth')
 			}
 		};
 
-		//Filter Client List
-		// $scope.filteredClients = [];
-		// $scope.includeTier = function(tier) {
-		// 	var i = $.inArray(tier, $scope.filteredClients);
-		// 	if (i > -1) {
-		// 			$scope.filteredClients.splice(i, 1);
-		// 	} else {
-		// 			$scope.filteredClients.push(tier);
-		// 	}
-		// };
-
-		// $scope.clientFilter = function(client) {
-		// 	if ($scope.filteredClients.length > 0) {
-		// 			if ($.inArray(client.tier, $scope.filteredClients) < 0)
-		// 					return;
-		// 	}
-		// 	return client;
-		// };
-
 		$scope.checkboxModel = {
-			platinum : true,
+			platinum : false,
 			gold: false
 		};
 
 		$scope.updateClient = function() {
 			console.log($scope.clients.length);
-			if($scope.checkboxModel.platinum) {
+			if($scope.checkboxModel.platinum && $scope.checkboxModel.gold) {
+				console.log('test');
 				for (var i = 0; i < $scope.clients.length; i++) {
-					if($scope.clients[i].tier === 'Platinum') {
+					if($scope.clients[i].tier === 'Bronze' || $scope.clients[i].tier === 'Silver') {
 						$scope.clients.splice(i, 1);
 					}
 				}

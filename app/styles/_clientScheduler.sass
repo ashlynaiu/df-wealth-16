@@ -140,13 +140,6 @@
 		background-color: $light-blue-gray
 		border-top: $standard-border
 
-//Animate Dropdown
-.segmentComponent-dropdown.dropdownShow
-	opacity: 1
-
-.segmentComponent-dropdown.dropdownHide
-	opacity: 0
-
 .clientScheduler-buttonGroup
 	align-self: center
 	div:not(:last-child)
@@ -200,9 +193,12 @@
 		padding: 16px
 
 .clientListComponent-slider--filter
+	position: relative
 	@extend %clientListComponent-slider
 	.slider-body
 		display: flex
+		height: 220px
+		overflow: scroll
 
 		.slider-title
 			font-size: 14px
@@ -220,6 +216,9 @@
 		padding: 8px 16px
 		border-top: $standard-border
 		background-color: $light-blue-gray
+		position: absolute
+		bottom: 0
+		width: 100%
 
 .clientListComponent-slider--wave
 	@extend %clientListComponent-slider

@@ -28,7 +28,7 @@
 			<div class="segmentComponent-item--add" ng-click="toggleDropdown()">
 				<p class="segmentComponent-item-title"><span>Add Segment</span></p>
 			</div>
-			<div ng-include="'views/partials/segmentDropdown.html'" class="segmentComponent-dropdown" ng-class="showDropdown ? 'dropdownShow' : 'dropdownHide'"></div>
+			<div ng-include="'views/partials/segmentDropdown.html'" class="segmentComponent-dropdown" ng-if="showDropdown"></div>
 		</div>
 	</div>
 
