@@ -1,6 +1,6 @@
-var wwwhisper = require('connect-wwwhisper');
 var gzippo = require('gzippo');
 var express = require('express');
+var wwwhisper = require('connect-wwwhisper');
 var app = express();
 app.use(gzippo.staticGzip("" + __dirname + "/dist"));
 
