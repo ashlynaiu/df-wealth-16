@@ -1,5 +1,7 @@
 <div class="calendar-header">
-	<img src="/images/calendar-header.png" />
+	<a class="calendar-header-SecretLink" ui-sref="mobile">
+		<img src="/images/calendar-header.png"/>
+	</a>
 	<div class="calendar-header-buttonGroup">
 		<button class="slds-button slds-button--neutral">New Event</button>
 		<button class="slds-button slds-button--neutral" ng-click="toggleScheduler()">
@@ -9,5 +11,7 @@
 	</div>
 </div>
 <div class="calendar-body">
-	<img src="/images/calendar-stepOne.png" />
+	<div ng-if="mainCalendar">
+		<img src="/images/calendar-stepOne.png" />
+	</div>
 </div>

@@ -36,14 +36,8 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .state('success', {
-        url: '',
-        parent: 'frame',
-        templateUrl: 'views/success.html',
-        controller: 'SuccessCtrl'
-      })
       .state('mobile', {
-        url: '',
+        url: 'mobile',
         parent: 'frame',
         templateUrl: 'views/mobile.html',
         controller: 'MobileCtrl'

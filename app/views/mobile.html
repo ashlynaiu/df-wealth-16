@@ -1,4 +1,41 @@
-<div class="cream-main-frame">
-  <h1>New Template</h1>
-  <p>Some additional documentation for some of the SASS and HTML can be found at <a href="https://ashlyn-style-guide.herokuapp.com/" target="_blank">here</a>.</p>
+<div class="mobile-frame">
+	<div class="mobileContainer">
+		<div class="mobileContainer-screen">
+			<div class="mobileContainer-header">
+				<h1>Your Financial Advisor wants to discuss college and goal planning.</h1>
+				<p>Select the best time for an hour meeting.</p>
+			</div>
+			<div class="mobileContainer-body">
+				<div class="mobile-dateSelect">
+					<!--Date Picker -->
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="select-01">Select a Date</label>
+						<div class="slds-form-element__control">
+							<div class="slds-select_container">
+								<select id="select-01" class="slds-select">
+									<option>October 5, 2016</option>
+									<option>October 6, 2016</option>
+									<option>October 7, 2016</option>
+									<option>October 8, 2016</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="mobile-inputButton">
+						<button class="slds-button slds-button--brand">Search</button>
+					</div>
+				</div>
+
+				<p>These times are open based on your personal and financial advisor's calendar</p>
+
+				<div class="mobile-timeSelect">
+					<button ng-repeat="button in buttonModel" class="slds-button slds-button--neutral" ng-click="toggleButtons(button.name)" ng-class="button.on ? 'isSelected' : 'notSelected'">{{button.text}}</button>
+				</div>
+			</div>
+
+			<div class="mobileContainer-footer">
+				<button class="slds-button slds-button--brand" ui-sref="success">Schedule Meeting</button>
+			</div>
+		</div>
+	</div>
 </div>

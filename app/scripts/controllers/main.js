@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('DF16Wealth')
-	.controller('MainCtrl', function ($scope, clients, $timeout) {
+	.controller('MainCtrl', function ($scope, clients, $timeout, $state) {
 		//Get Client Items
+		$scope.$state = $state;
 		clients.items().success(function(data){
 				$scope.clients = data;
 		});
@@ -76,25 +77,20 @@ angular.module('DF16Wealth')
 			}
 		};
 
+		//Filter the list
 		$scope.checkboxModel = {
 			platinum : false,
 			gold: false
 		};
 
 		$scope.updateClient = function() {
-			console.log($scope.clients.length);
 			if($scope.checkboxModel.platinum && $scope.checkboxModel.gold) {
-				console.log('test');
 				for (var i = 0; i < $scope.clients.length; i++) {
 					if($scope.clients[i].tier === 'Bronze' || $scope.clients[i].tier === 'Silver') {
 						$scope.clients.splice(i, 1);
 					}
 				}
 			}
-		};
-
-		$scope.test = function() {
-			console.log('hack this shit');
 		};
 
 		//Toggle the slider with the chart
