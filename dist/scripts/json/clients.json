@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "name": "Anna Purdy",
+        "tier": "Gold",
+        "tolerance": "Moderate",
+        "accounts": "527555.00",
+        "interaction": "Mar 31, 2016"
+    },
+    {
+        "id": "2",
+        "name": "Bernie Wunsch",
+        "tier": "Bronze",
+        "tolerance": "Aggressive",
+        "accounts": "434610.00",
+        "interaction": "Feb 3, 2016"
+    },
+    {
+        "id": "3",
+        "name": "Bert Welch",
+        "tier": "Platinum",
+        "tolerance": "Moderate",
+        "accounts": "736912.00",
+        "interaction": "Feb 23, 2016"
+    },
+    {
+        "id": "4",
+        "name": "Felipa Upton",
+        "tier": "Silver",
+        "tolerance": "Moderate",
+        "accounts": "826162.00",
+        "interaction": "May 19, 2016"
+    },
+    {
+        "id": "5",
+        "name": "Judy Buckridge",
+        "tier": "Gold",
+        "tolerance": "Aggressive",
+        "accounts": "844162.00",
+        "interaction": "Apr 12, 2016"
+    },
+    {
+        "id": "6",
+        "name": "Kaden Blick",
+        "tier": "Platinum",
+        "tolerance": "Moderate",
+        "accounts": "627192.00",
+        "interaction": "Jun 1, 2016"
+    },
+    {
+        "id": "7",
+        "name": "Pam Yoon",
+        "tier": "Gold",
+        "tolerance": "Moderate",
+        "accounts": "725312.00",
+        "interaction": "May 10, 2016"
+    },
+    {
+        "id": "8",
+        "name": "Rachel Adams",
+        "tier": "Platinum",
+        "tolerance": "Aggressive",
+        "accounts": "893765.00",
+        "interaction": "Jun 13, 2016"
+    },
+    {
+        "id": "9",
+        "name": "Ray Lew",
+        "tier": "Silver",
+        "tolerance": "Moderate",
+        "accounts": "937281.00",
+        "interaction": "March 22, 2016"
+    },
+    {
+        "id": "10",
+        "name": "Teressa Wignall",
+        "tier": "Gold",
+        "tolerance": "Moderate",
+        "accounts": "716233.00",
+        "interaction": "March 30, 2016"
+    },
+    {
+        "id": "11",
+        "name": "Travis Dacus",
+        "tier": "Platinum",
+        "tolerance": "Moderate",
+        "accounts": "795512.00",
+        "interaction": "February 5, 2016"
+    }
+]
