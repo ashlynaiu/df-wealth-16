@@ -8,7 +8,14 @@ angular.module('DF16Wealth')
 				$scope.clients = data;
 		});
 
-		//ng-if states
+		//ng-if states for calendar
+		//Move calendar state management to directive
+		$scope.mainCalendar = true;
+		$scope.sentInvitesCalendar = false;
+		$scope.successCalendar = false;
+
+		//ng-if states for scheduler
+		$scope.successCalendar = false;
 		$scope.showClientList = false;
 		$scope.showWave = true;
 		$scope.showFilter = false;
@@ -27,9 +34,14 @@ angular.module('DF16Wealth')
 			}
 		};
 
-		//On click for connect to clients
+		//Send client invites
 		$scope.toggleSchedulerComplete = function() {
 			$scope.showScheduler = false;
+			//show new calendar view
+			$scope.mainCalendar = false;
+			$scope.sentInvitesCalendar = true;
+
+			//Show success toast and then fade it away
 			$timeout(function() {
 				$scope.showSuccess = true;
 			}, 1000);

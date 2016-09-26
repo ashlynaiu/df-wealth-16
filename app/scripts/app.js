@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+
+//TO DO Transitions between states
 angular
   .module('DF16Wealth', [
     'ngAnimate',
@@ -42,11 +44,11 @@ angular
         templateUrl: 'views/mobile.html',
         controller: 'MobileCtrl'
       })
-      .state('activity', {
-        url: '',
+      .state('success', {
+        url: 'success',
         parent: 'frame',
-        templateUrl: 'views/activity.html',
-        controller: 'ActivityCtrl'
+        templateUrl: 'views/success.html',
+        controller: 'SuccessCtrl'
       });
   }).run(function($rootScope){
   $rootScope.$on('$stateChangeSuccess', function() {
