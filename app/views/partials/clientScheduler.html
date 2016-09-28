@@ -35,8 +35,10 @@
 
 		<div class="clientListComponent-listContainer">
 			<div class="clientListComponent-listTable" ng-include="'views/partials/clientTableComponent.html'"></div>
-			<div class="clientListComponent-slider--filter" ng-include="'views/partials/clientFilter.html'" ng-if="showFilter"></div>
-			<div class="clientListComponent-slider--wave" ng-include="'views/partials/clientWave.html'" ng-if="showWave"></div>
+			<div class="clientListComponent-listContainer--right">
+				<div class="clientListComponent-slider--filter" ng-include="'views/partials/clientFilter.html'" ng-if="showFilter"></div>
+				<div class="clientListComponent-slider--wave" ng-include="'views/partials/clientWave.html'" ng-if="showWave"></div>
+			</div>
 		</div>
 
 		<div class="clientListComponent-bottomNav">
