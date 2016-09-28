@@ -168,7 +168,7 @@
 	width: 100%
 
 	.clientListComponent-listTable
-		width: 65%
+		width: 100%
 		box-sizing: border-box
 
 	table
@@ -177,11 +177,13 @@
 
 %clientListComponent-slider
 	box-sizing: border-box
-	width: 35%
 	background-color: white
+	width: 470px
+	min-width: 470px
+	max-width: 470px
 	border: $standard-border
 	height: 303px
-	overflow: scroll
+	overflow: hidden
 
 	.slider-header
 		padding: 9px 16px
@@ -221,7 +223,20 @@
 		width: 100%
 
 .clientListComponent-slider--wave
+	background-color: #152E5D
 	@extend %clientListComponent-slider
+	.slider-body
+		padding: 0
+		position: relative
+	img
+		position: absolute
+		transition: $slow-animate
+
+	.waveOneShow
+		opacity: 1
+
+	.waveOneHide
+		opacity: 0
 
 /////////////////////////////////////////
 ///////List Component Styles Footer/////
