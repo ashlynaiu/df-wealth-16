@@ -28,3 +28,36 @@
 //SLDS Overwrite Hack - meh
 .slds-form-element.bumperBottom
 	margin-bottom: 30px !important
+
+.onNav
+	box-shadow: inset -1px 0 0 #d8dde6,inset 1px 0 0 #d8dde6
+	border-top: 3px solid #00a1df
+	outline: 0
+	border-radius: 0
+	background-color: #f7f9fb
+	border-bottom: 3px solid #00a1df
+	margin-bottom: -3px
+	text-decoration: none
+	cursor: pointer
+/////////////////////////////////////
+///////UI View Animation Styles/////
+///////////////////////////////////
+
+.outFrame
+	opacity: 1
+	transition: $standard-animate
+
+[ui-view].ng-enter, [ui-view].ng-leave
+	transition: $standard-animate
+
+[ui-view].ng-enter
+	opacity: 0
+
+[ui-view].ng-enter-active
+	opacity: 1
+
+[ui-view].ng-leave
+	opacity: 1
+
+[ui-view].ng-leave-active
+	opacity: 0
