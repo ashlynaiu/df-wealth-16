@@ -4,6 +4,11 @@ angular.module('DF16Wealth')
 	.controller('MobileCtrl', function ($scope, $state) {
 		$scope.$state = $state;
 
+		//Add background class to html element
+		var htmlDOM = angular.element( document.querySelector( 'html' ));
+		htmlDOM.addClass('mobile-background');
+
+		//create button model
 		$scope.buttonModel = [
 			{
 				name: 'buttonOne',
