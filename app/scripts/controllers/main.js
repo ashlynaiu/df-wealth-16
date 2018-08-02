@@ -4,9 +4,19 @@ angular.module('DF16Wealth')
 	.controller('MainCtrl', function ($scope, clients, $timeout, $state) {
 		//Get Client Items
 		$scope.$state = $state;
-		clients.items().success(function(data){
-				$scope.clients = data;
-		});
+		$scope.clients;
+		$scope.status;
+
+		getClients();
+
+		function getClients() {
+			clients.items()
+			.then(function(response) {
+				$scope.clients = response.data;
+			}, function (error) {
+				$scope.status = error;
+			});
+		};
 
 		//ng-if states for calendar
 		//Move calendar state management to directive
